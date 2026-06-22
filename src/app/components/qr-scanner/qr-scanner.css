@@ -1,0 +1,59 @@
+/* Action Grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-left: 350px;
+}
+
+.action-card {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.box {
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    border: 1px solid  #2a2a2a; 
+}
+
+.card-label {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: medium;
+    color: #c9a84c;
+}
+
+#camera-btn {
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 0%;
+    color: black;
+    width: 350px;
+    background-color: #c9a84c;
+}
+
+#look-up-button {
+     margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 0%;
+    color: black;
+    width: 350px;
+    border:1px solid #c9a84c;
+    color: #c9a84c;
+}
+
+.token-input {
+    width: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none; 
+}
+
+   

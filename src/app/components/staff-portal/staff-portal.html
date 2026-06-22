@@ -1,0 +1,88 @@
+ <!-- staff-console.component.html -->
+<div class="staff-container">
+  <!-- Navigation -->
+  <!-- <header class="navbar">
+    <div class="nav-brand">Swingles Connect</div>
+    <nav class="nav-links">
+      <a href="#">HOME</a>
+      <a href="#">MENU</a>
+      <a href="#">EVENTS</a>
+      <a href="#">BOOK A TABLE</a>
+      <a href="#">MEMBERSHIP</a>
+      <a href="#">ACCOUNT</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="weather">11°C Partly cloudy</span>
+      <span class="lang">ENG</span>
+    </div>
+  </header> -->
+
+  <!-- Staff Console Content -->
+  <section class="staff-content">
+    <div class="staff-header">
+      <span class="section-label">STAFF CONSOLE</span>
+      <h1>The <span id="back-house">back of house.</span></h1>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="staff-tabs">
+      <a href="#" class="active">VERIFY</a>
+      <a href="/orders">ORDERS</a>
+      <a href="#">SHIFTS</a>
+      <a href="#">REPORTS</a>
+      <a href="#">EVENTS</a>
+      <a href="#">EMPLOYEES</a>
+    </div>
+    <router-outlet/>
+    </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>Swingles</h2>
+        <span class="brand-sub">PUB & CHISANYAMA</span>
+        <p class="footer-tagline">
+          Where the fire never sleeps and the gold never tarnishes. Premium pours, slow-flame chisanyama, late nights.
+        </p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>VISIT</h4>
+          <ul>
+            <li>Open Wed – Sun</li>
+            <li>16:00 – late</li>
+            <li>Johannesburg, ZA</li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Reserve a table</a></li>
+            <li><a href="#">Membership</a></li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h4>CONTACT</h4>
+          <ul>
+            <li><a href="#">hello@swingles.co.za</a></li>
+            <li><a href="#">+27 11 000 0000</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal">
+        <span>2026 SWINGLES PUB & CHISANYAMA</span>
+      </div>
+      <div class="footer-meta">
+        <span>11°C Partly cloudy</span>
+        <span>ENG</span>
+        <span>05:48</span>
+        <span>2026/06/22</span>
+      </div>
+    </div>
+  </footer>
+</div>
