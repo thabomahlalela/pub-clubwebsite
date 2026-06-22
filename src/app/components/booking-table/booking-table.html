@@ -1,0 +1,256 @@
+<div class="booking-page" [class.mobile-layout]="(isMobile$ | async)?.matches">
+
+  <!-- NAVBAR -->
+  <mat-toolbar class="navbar">
+
+    <div class="logo">
+      <span class="brand">Swingles</span>
+      <span class="tag">PUB & CHISANYAMA</span>
+    </div>
+
+    <div class="nav-links">
+      <a>HOME</a>
+      <a>MENU</a>
+      <a>EVENTS</a>
+      <a class="active">BOOK A TABLE</a>
+      <a>MEMBERSHIP</a>
+    </div>
+
+    <button mat-stroked-button class="account-btn">
+      ACCOUNT
+    </button>
+
+  </mat-toolbar>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="section-label">
+      RESERVE
+    </div>
+
+    <h1 class="hero-title">
+      Book your <span>table.</span>
+    </h1>
+
+    <p class="hero-text">
+      Pick a date, time and table. We'll hand you a QR pass that our hosts
+      scan at the door — no queue, no fuss.
+    </p>
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+      <div class="field">
+        <label>DATE</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            [matDatepicker]="picker">
+
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker">
+          </mat-datepicker-toggle>
+
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="field">
+        <label>TIME</label>
+
+        <mat-form-field appearance="outline">
+          <mat-select value="19:00">
+            <mat-option value="19:00">19:00</mat-option>
+            <mat-option value="20:00">20:00</mat-option>
+            <mat-option value="21:00">21:00</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="field">
+        <label>PARTY SIZE</label>
+
+        <mat-form-field appearance="outline">
+          <input matInput value="2">
+        </mat-form-field>
+      </div>
+
+      <div class="field">
+        <label>SECTION</label>
+
+        <div class="section-buttons">
+          <button class="selected">
+            STANDARD
+          </button>
+
+          <button>
+            VIP
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TABLES -->
+
+    <h2 class="available">
+      Available tables — 8 open
+    </h2>
+
+    <div class="tables-grid">
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 1</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 4</div>
+
+        <div class="desc">Window seat</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 2</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 4</div>
+
+        <div class="desc">Standard seating</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 3</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 6</div>
+
+        <div class="desc">Near stage</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 4</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 2</div>
+
+        <div class="desc">Bar-side high top</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 5</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 6</div>
+
+        <div class="desc">Standard seating</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 6</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 4</div>
+
+        <div class="desc">Patio</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 7</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 4</div>
+
+        <div class="desc">Patio</div>
+      </mat-card>
+
+      <mat-card class="table-card">
+        <div class="top">
+          <span>TABLE 8</span>
+          <span>STANDARD</span>
+        </div>
+
+        <div class="seats">Seats 8</div>
+
+        <div class="desc">Group booth</div>
+      </mat-card>
+
+    </div>
+
+    <div class="bottom-action">
+
+      <p>
+        Choose a table to continue.
+      </p>
+
+      <button mat-flat-button class="confirm-btn">
+        CONFIRM BOOKING
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-logo">Swingles</div>
+        <div class="footer-sub">PUB & CHISANYAMA</div>
+
+        <p>
+          Where the fire never sleeps and the gold never tarnishes.
+          Premium pours, slow-flame chisanyama, late nights.
+        </p>
+      </div>
+
+      <div>
+        <h4>VISIT</h4>
+
+        <p>
+          Open Wed – Sun<br>
+          16:00 – late<br>
+          Johannesburg, ZA
+        </p>
+      </div>
+
+      <div>
+        <h4>EXPLORE</h4>
+
+        <p>Menu</p>
+        <p>Events</p>
+        <p>Reserve a table</p>
+        <p>Membership</p>
+      </div>
+
+      <div>
+        <h4>CONTACT</h4>
+
+        <p>hello@swingles.co.za</p>
+        <p>+27 11 000 0000</p>
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>

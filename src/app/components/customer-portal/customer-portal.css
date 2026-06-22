@@ -1,0 +1,807 @@
+:host {
+  display: block;
+}
+
+/* ===== SWINGLES LUXURY THEME ===== */
+
+:root {
+  --bg: #040507;
+  --surface: #07090d;
+  --surface-2: #0a0c11;
+
+  --border: #16181d;
+
+  --gold: #b68a32;
+  --gold-light: #c99d43;
+
+  --text: #f0e7d5;
+  --muted: #8f8473;
+}
+
+/* PAGE */
+
+.account-page {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #040507 0%,
+      #050608 100%
+    );
+
+  color: var(--text);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+/* HEADER */
+
+.topbar {
+  background: rgba(4, 5, 7, .98);
+
+  border-bottom: 1px solid var(--border);
+
+  min-height: 72px;
+
+  padding: 0 5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo .gold {
+  color: var(--gold);
+
+  font-size: 42px;
+
+  font-weight: 400;
+}
+
+.logo .small {
+  color: #6d675d;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #b6ae9f !important;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+/* ACCOUNT BUTTON */
+
+.account-btn {
+  border: 1px solid #8d6a26 !important;
+
+  color: var(--gold-light) !important;
+
+  border-radius: 0 !important;
+
+  letter-spacing: 4px;
+
+  padding: 10px 22px !important;
+}
+
+.account-btn:hover {
+  background: rgba(182, 138, 50, .08);
+}
+
+/* CONTENT */
+
+.content-container {
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  padding: 90px 30px;
+
+  box-sizing: border-box;
+}
+
+/* HERO */
+
+.hero {
+  margin-bottom: 50px;
+}
+
+.label {
+  color: var(--gold);
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  font-size: 12px;
+
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 78px;
+
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+.gold-text {
+  color: var(--gold);
+
+  font-style: italic;
+}
+
+.email {
+  margin-top: 18px;
+
+  color: #9b9486;
+
+  font-size: 18px;
+}
+
+/* CARDS */
+
+.membership-card,
+.booking-card {
+  background: var(--surface) !important;
+
+  border: 1px solid var(--border);
+
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+}
+
+.membership-card {
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-label {
+  color: var(--gold);
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+.membership-card h2 {
+  color: var(--gold);
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  margin: 12px 0 8px;
+}
+
+.membership-card p {
+  color: var(--muted);
+
+  margin: 0;
+}
+
+/* SECTION TITLES */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-size: 56px;
+
+  font-weight: 300;
+
+  color: var(--text);
+}
+
+.gold-link {
+  color: var(--gold);
+
+  letter-spacing: 4px;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+/* BOOKINGS */
+
+.booking-card {
+  padding: 24px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-card + .booking-card {
+  margin-top: -1px;
+}
+
+.booking-title {
+  color: var(--text);
+
+  font-size: 34px;
+
+  font-weight: 400;
+}
+
+.booking-meta {
+  color: var(--muted);
+
+  margin-top: 8px;
+
+  font-size: 18px;
+}
+
+/* TAGS */
+
+.tag {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  padding: 3px 9px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.confirmed {
+  border: 1px solid var(--gold);
+
+  color: var(--gold);
+}
+
+.verified {
+  border: 1px solid #049a7a;
+
+  color: #049a7a;
+}
+
+.vip {
+  color: var(--gold);
+
+  font-size: 14px;
+}
+
+.standard {
+  color: #b4aca0;
+
+  font-size: 14px;
+}
+
+/* BUTTONS */
+
+.gold-button {
+  border: 1px solid #8d6a26 !important;
+
+  color: var(--gold-light) !important;
+
+  border-radius: 0 !important;
+
+  letter-spacing: 4px;
+
+  min-width: 130px;
+
+  height: 48px;
+
+  background: transparent !important;
+}
+
+.gold-button:hover {
+  background: rgba(182, 138, 50, .08) !important;
+}
+
+/* ROLE */
+
+.role-section {
+  margin-top: 70px;
+
+  padding-top: 40px;
+
+  border-top: 1px solid var(--border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.role-section span {
+  color: var(--gold);
+
+  letter-spacing: 3px;
+}
+
+.dashboard {
+  margin-left: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .section-header h2 {
+    font-size: 44px;
+  }
+
+  .membership-card,
+  .booking-card,
+  .role-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .content-container {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section-header h2 {
+    font-size: 36px;
+  }
+
+  .booking-title {
+    font-size: 24px;
+  }
+
+  .booking-meta {
+    font-size: 15px;
+  }
+
+  .gold-button {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+.account-page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 90px 24px;
+  background: #020305;
+  color: #f5f1e8;
+}
+
+/* HERO */
+
+.label {
+  color: #c89b3c;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 78px;
+  line-height: 1;
+  font-weight: 300;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero span {
+  color: #c89b3c;
+  font-style: italic;
+}
+
+.email {
+  color: #a1a1a1;
+  margin-top: 18px;
+}
+
+/* MEMBERSHIP */
+
+.membership-card {
+  margin-top: 60px;
+  background: #06080d !important;
+  border: 1px solid #1a1d23;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.small-label {
+  color: #c89b3c;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.plan {
+  font-size: 48px;
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 10px;
+}
+
+.renewal {
+  color: #a1a1a1;
+  margin-top: 6px;
+}
+
+/* HEADERS */
+
+.section-header {
+  margin-top: 60px;
+  margin-bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 54px;
+  font-weight: 300;
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+}
+
+.link {
+  color: #c89b3c;
+  letter-spacing: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* LIST ITEMS */
+
+.booking-card {
+  background: #06080d !important;
+  border: 1px solid #1a1d23;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  padding: 24px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-card + .booking-card {
+  border-top: none;
+}
+
+.booking-info h3 {
+  margin: 0;
+  font-size: 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+
+.booking-info p {
+  margin-top: 10px;
+  color: #a1a1a1;
+}
+
+.booking-info span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #c89b3c;
+  margin-left: 8px;
+}
+
+.badge {
+  border: 1px solid #8d6d2d;
+  padding: 3px 10px;
+}
+
+.success {
+  color: #00a37a !important;
+  border-color: #00a37a;
+}
+
+/* BUTTONS */
+
+.gold-btn {
+  border: 1px solid #6b5425 !important;
+  color: #c89b3c !important;
+  border-radius: 0 !important;
+  letter-spacing: 4px;
+  min-width: 110px;
+  height: 42px;
+}
+
+/* BOTTOM */
+
+.bottom-row {
+  border-top: 1px solid #1a1d23;
+  margin-top: 60px;
+  padding-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roles {
+  color: #c89b3c;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.roles span {
+  margin-left: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .membership-card,
+  .booking-card,
+  .bottom-row,
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .section-header h2 {
+    font-size: 38px;
+  }
+
+  .gold-btn {
+    width: 100%;
+  }
+
+  .account-page {
+    padding: 40px 16px;
+  }
+}
+
+
+ .account-page {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 90px 60px;
+  box-sizing: border-box;
+} 
+
+
+
+/* .account-page {
+  width: 100%;
+  padding: 90px 8%;
+  box-sizing: border-box;
+} */
+
+.footer-grid {
+  width: 100%;
+  padding: 70px 8%;
+  box-sizing: border-box;
+}
+
+
+.footer {
+  margin-top: 80px;
+  border-top: 1px solid #1a1d23;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 80px;
+
+  max-width: 1040px;
+  margin: 0 auto;
+
+  padding: 60px 24px;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  color: #c89b3c;
+  margin-bottom: 10px;
+}
+
+.footer-subtitle {
+  color: #9b9b9b;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+.footer-column h4 {
+  color: #c89b3c;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+}
+
+.footer-column p,
+.footer-column a {
+  display: block;
+  color: #b0b0b0;
+  text-decoration: none;
+  line-height: 1.9;
+  margin-bottom: 6px;
+}
+
+.copyright {
+  border-top: 1px solid #1a1d23;
+
+  text-align: center;
+
+  color: #8d8d8d;
+  font-size: 11px;
+  letter-spacing: 4px;
+
+  padding: 24px;
+}
+
+
+
+
+footer {
+  border-top: 1px solid #181818;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 80px;
+  padding: 70px 20px;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  color: #c89b3c;
+  font-size: 46px;
+}
+
+.footer-small {
+  color: #888;
+  letter-spacing: 4px;
+  font-size: 11px;
+  margin-bottom: 24px;
+}
+
+.footer-grid h4 {
+  color: #c89b3c;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.footer-grid p {
+  color: #b7b7b7;
+  line-height: 1.8;
+}
+
+.copyright {
+  border-top: 1px solid #181818;
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 12px;
+  letter-spacing: 4px;
+  padding: 24px;
+}
+.top-nav {
+  height: 78px;
+  background: #050506;
+  border-bottom: 1px solid #181818;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo .gold {
+  color: #c89b3c;
+  font-size: 38px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.logo .small {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.account-btn {
+  border-color: #6c5522 !important;
+  color: #c89b3c !important;
+  padding: 0 24px;
+}
