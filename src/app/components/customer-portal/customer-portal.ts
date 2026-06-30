@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import html2canvas from 'html2canvas';
+import html2canvas from  'html2canvas';
 
 @Component({
   selector: 'app-customer-portal',
