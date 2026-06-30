@@ -1,0 +1,1453 @@
+:host {
+  display: block;
+}
+
+/* ===================================================
+   COLORS
+=================================================== */
+
+:root{
+  --bg:#050505;
+  --surface:#0b0b0b;
+  --surface-2:#111111;
+
+  --border:#222222;
+  --border-light:#2d2d2d;
+
+  --gold:#c89b3c;
+  --gold-hover:#ddb357;
+
+  --text:#f5f5f5;
+  --muted:#9b9b9b;
+
+  --radius:18px;
+  --transition:.25s ease;
+}
+
+/* ===================================================
+   DIALOG
+=================================================== */
+
+.upload-dialog{
+
+  position:relative;
+
+  width:100%;
+  max-width:1280px;
+
+  margin:auto;
+
+  padding:42px;
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  color:var(--text);
+
+  box-shadow:
+      0 20px 60px rgba(0,0,0,.55);
+
+}
+
+/* ===================================================
+   CLOSE
+=================================================== */
+
+.close-btn{
+
+  position:absolute;
+
+  right:24px;
+
+  top:24px;
+
+  width:42px;
+
+  height:42px;
+
+  color:#cfcfcf;
+
+  background:#171717;
+
+  border:1px solid #2d2d2d;
+
+  transition:var(--transition);
+
+}
+
+.close-btn:hover{
+
+  color:white;
+
+  background:#242424;
+
+}
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+.dialog-header{
+
+  text-align:center;
+
+  margin-bottom:50px;
+
+}
+
+.camera-circle{
+
+  width:84px;
+
+  height:84px;
+
+  border-radius:50%;
+
+  margin:auto auto 24px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+      linear-gradient(
+      180deg,
+      #d7b15d,
+      #b78628);
+
+  box-shadow:
+      0 10px 30px rgba(200,155,60,.35);
+
+}
+
+.camera-circle mat-icon{
+
+  font-size:42px;
+
+  width:42px;
+
+  height:42px;
+
+  color:#111;
+
+}
+
+.dialog-header h1{
+
+  margin:0;
+
+  font-size:38px;
+
+  font-weight:700;
+
+  letter-spacing:.4px;
+
+}
+
+.dialog-header p{
+
+  margin-top:18px;
+
+  color:var(--muted);
+
+  line-height:1.7;
+
+  font-size:15px;
+
+}
+
+/* ===================================================
+   GOLD DIVIDER
+=================================================== */
+
+.divider{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:18px;
+
+  margin-top:22px;
+
+}
+
+.divider span{
+
+  width:110px;
+
+  height:1px;
+
+  background:#3a3a3a;
+
+}
+
+.divider mat-icon{
+
+  color:var(--gold);
+
+  font-size:18px;
+
+  width:18px;
+
+  height:18px;
+
+}
+
+/* ===================================================
+   BODY
+=================================================== */
+
+.dialog-body{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:42px;
+
+}
+
+/* ===================================================
+   COLUMNS
+=================================================== */
+
+.left-column,
+.right-column{
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+.left-column h3,
+.right-column h3{
+
+  margin:0 0 20px;
+
+  font-size:22px;
+
+  font-weight:600;
+
+}
+
+/* ===================================================
+   UPLOAD AREA
+=================================================== */
+
+.upload-box{
+
+  background:#0f0f0f;
+
+  border:2px dashed #3d3d3d;
+
+  border-radius:22px;
+
+  min-height:340px;
+
+  padding:45px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  transition:var(--transition);
+
+}
+
+.upload-box:hover{
+
+  border-color:var(--gold);
+
+  background:#121212;
+
+}
+
+.upload-icon{
+
+  width:72px;
+
+  height:72px;
+
+  font-size:72px;
+
+  color:var(--gold);
+
+  margin-bottom:18px;
+
+}
+
+.upload-box h4{
+
+  margin:0;
+
+  font-size:24px;
+
+  font-weight:600;
+
+}
+
+.upload-box p{
+
+  margin:14px 0;
+
+  color:var(--muted);
+
+}
+
+.upload-box small{
+
+  margin-top:18px;
+
+  color:#888;
+
+  font-size:13px;
+
+}
+
+/* ===================================================
+   BUTTON
+=================================================== */
+
+.choose-btn{
+
+  margin-top:10px;
+
+  height:50px;
+
+  padding:0 32px;
+
+  border-radius:12px !important;
+
+  border:1px solid var(--gold) !important;
+
+  color:var(--gold) !important;
+
+  font-weight:600;
+
+  letter-spacing:.8px;
+
+  transition:var(--transition);
+
+}
+
+.choose-btn:hover{
+
+  background:rgba(200,155,60,.12);
+
+  transform:translateY(-2px);
+
+}
+
+/* ===================================================
+   PREVIEW
+=================================================== */
+
+.preview-row{
+
+  margin-top:28px;
+
+  display:flex;
+
+  gap:18px;
+
+  flex-wrap:wrap;
+
+}
+
+.photo-card{
+
+  position:relative;
+
+  width:130px;
+
+  height:130px;
+
+  overflow:hidden;
+
+  border-radius:16px;
+
+  border:1px solid #2d2d2d;
+
+  background:#111;
+
+  transition:.25s;
+
+}
+
+.photo-card:hover{
+
+  transform:translateY(-4px);
+
+  border-color:var(--gold);
+
+}
+
+.photo-card img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+}
+
+.remove-btn{
+
+  position:absolute;
+
+  top:8px;
+
+  right:8px;
+
+  width:30px;
+
+  height:30px;
+
+  background:rgba(0,0,0,.65);
+
+  color:white;
+
+  z-index:2;
+
+}
+
+.remove-btn:hover{
+
+  background:#b91c1c;
+
+}
+
+.photo-add{
+
+  width:130px;
+
+  height:130px;
+
+  border-radius:16px;
+
+  border:2px dashed #444;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  cursor:pointer;
+
+  transition:var(--transition);
+
+}
+
+.photo-add mat-icon{
+
+  font-size:42px;
+
+  width:42px;
+
+  height:42px;
+
+  color:#888;
+
+}
+
+.photo-add:hover{
+
+  border-color:var(--gold);
+
+  background:#121212;
+
+}
+
+.photo-add:hover mat-icon{
+
+  color:var(--gold);
+
+}
+
+
+
+
+/*==================================================
+  RIGHT COLUMN FORM
+==================================================*/
+
+.details-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.details-form mat-label{
+  color:var(--text);
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:6px;
+  display:block;
+}
+
+.optional{
+  color:var(--muted);
+  font-weight:400;
+}
+
+.full-width{
+  width:100%;
+}
+
+/*==================================================
+  ANGULAR MATERIAL FORM FIELDS
+==================================================*/
+
+::ng-deep .mat-mdc-form-field{
+  width:100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper{
+
+  background:#111111 !important;
+
+  border-radius:14px !important;
+
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing{
+
+  border-color:#2d2d2d !important;
+
+  border-width:1px !important;
+
+  transition:.25s;
+
+}
+
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__trailing{
+
+  border-color:var(--gold) !important;
+
+}
+
+::ng-deep .mat-focused .mdc-notched-outline__leading,
+::ng-deep .mat-focused .mdc-notched-outline__notch,
+::ng-deep .mat-focused .mdc-notched-outline__trailing{
+
+  border-color:var(--gold) !important;
+
+  border-width:2px !important;
+
+}
+
+::ng-deep input.mat-mdc-input-element{
+
+  color:white !important;
+
+}
+
+::ng-deep textarea.mat-mdc-input-element{
+
+  color:white !important;
+
+  resize:none;
+
+}
+
+::ng-deep .mat-mdc-select-value{
+
+  color:white !important;
+
+}
+
+::ng-deep .mat-mdc-select-arrow{
+
+  color:var(--gold) !important;
+
+}
+
+::ng-deep .mat-mdc-form-field-icon-prefix{
+
+  color:var(--gold);
+
+}
+
+::ng-deep .mat-datepicker-toggle{
+
+  color:var(--gold);
+
+}
+
+::ng-deep .mat-mdc-form-field-hint{
+
+  color:#888;
+
+}
+
+/*==================================================
+  TEXTAREA
+==================================================*/
+
+textarea{
+
+  min-height:120px;
+
+  line-height:1.6;
+
+}
+
+/*==================================================
+  CHECKBOX
+==================================================*/
+
+.confirmation{
+
+  margin-top:18px;
+
+  padding:24px;
+
+  border-radius:18px;
+
+  border:1px solid var(--border);
+
+  background:#101010;
+
+}
+
+.confirmation h3{
+
+  margin:0 0 18px;
+
+}
+
+::ng-deep .mat-mdc-checkbox label{
+
+  color:#d8d8d8;
+
+  line-height:1.6;
+
+}
+
+::ng-deep .mdc-checkbox__background{
+
+  border-color:#555 !important;
+
+}
+
+::ng-deep .mat-mdc-checkbox.mat-accent{
+
+  --mdc-checkbox-selected-focus-icon-color:var(--gold);
+
+  --mdc-checkbox-selected-hover-icon-color:var(--gold);
+
+  --mdc-checkbox-selected-icon-color:var(--gold);
+
+  --mdc-checkbox-selected-pressed-icon-color:var(--gold);
+
+}
+
+/*==================================================
+  REVIEW CARD
+==================================================*/
+
+.review-card{
+
+  margin-top:28px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:30px;
+
+  padding:24px;
+
+  background:#111111;
+
+  border-radius:18px;
+
+  border:1px solid #222;
+
+}
+
+.review-left{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:18px;
+
+  flex:1;
+
+}
+
+.shield{
+
+  width:58px;
+
+  height:58px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:rgba(200,155,60,.12);
+
+  border:1px solid rgba(200,155,60,.35);
+
+}
+
+.shield mat-icon{
+
+  color:var(--gold);
+
+  font-size:30px;
+
+  width:30px;
+
+  height:30px;
+
+}
+
+.review-left h4{
+
+  margin:0;
+
+  font-size:18px;
+
+}
+
+.review-left p{
+
+  margin-top:8px;
+
+  color:var(--muted);
+
+  line-height:1.6;
+
+}
+
+.review-right{
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-end;
+
+  gap:14px;
+
+}
+
+.review-right small{
+
+  color:#888;
+
+}
+
+/*==================================================
+  BUTTONS
+==================================================*/
+
+.button-row{
+
+  display:flex;
+
+  gap:14px;
+
+}
+
+.cancel-btn{
+
+  height:46px;
+
+  padding:0 26px;
+
+  border-radius:12px !important;
+
+  border:1px solid #444 !important;
+
+  color:#ddd !important;
+
+  transition:.25s;
+
+}
+
+.cancel-btn:hover{
+
+  background:#1d1d1d;
+
+}
+
+.submit-btn{
+
+  height:46px;
+
+  padding:0 28px;
+
+  border-radius:12px !important;
+
+  background:linear-gradient(
+      180deg,
+      #d4b15d,
+      #b8862c) !important;
+
+  color:#111 !important;
+
+  font-weight:700;
+
+  letter-spacing:.6px;
+
+  transition:.25s;
+
+}
+
+.submit-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 10px 25px rgba(200,155,60,.35);
+
+}
+
+/*==================================================
+  MATERIAL MENU / SELECT PANEL
+==================================================*/
+
+::ng-deep .mat-mdc-select-panel{
+
+  background:#121212 !important;
+
+  border:1px solid #2b2b2b;
+
+}
+
+::ng-deep .mat-mdc-option{
+
+  color:white !important;
+
+}
+
+::ng-deep .mat-mdc-option:hover{
+
+  background:#1d1d1d !important;
+
+}
+
+::ng-deep .mat-mdc-option.mdc-list-item--selected{
+
+  background:rgba(200,155,60,.15) !important;
+
+}
+
+/*==================================================
+  DATEPICKER
+==================================================*/
+
+::ng-deep .mat-datepicker-content{
+
+  background:#111 !important;
+
+}
+
+::ng-deep .mat-calendar{
+
+  background:#111 !important;
+
+  color:white;
+
+}
+
+::ng-deep .mat-calendar-body-selected{
+
+  background:var(--gold) !important;
+
+  color:#111 !important;
+
+}
+
+::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected){
+
+  border-color:var(--gold);
+
+}
+
+
+
+
+/*==================================================
+  RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+  .upload-dialog{
+
+    max-width:95%;
+
+    padding:32px;
+
+  }
+
+  .dialog-body{
+
+    gap:28px;
+
+  }
+
+}
+
+@media (max-width:960px){
+
+  .dialog-body{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .review-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .review-right{
+
+    width:100%;
+
+    align-items:stretch;
+
+  }
+
+  .button-row{
+
+    width:100%;
+
+  }
+
+  .button-row button{
+
+    flex:1;
+
+  }
+
+}
+
+@media (max-width:768px){
+
+  .upload-dialog{
+
+    padding:24px;
+
+    border-radius:18px;
+
+  }
+
+  .camera-circle{
+
+    width:70px;
+    height:70px;
+
+  }
+
+  .camera-circle mat-icon{
+
+    font-size:34px;
+    width:34px;
+    height:34px;
+
+  }
+
+  .dialog-header h1{
+
+    font-size:30px;
+
+  }
+
+  .upload-box{
+
+    min-height:260px;
+
+    padding:28px;
+
+  }
+
+  .upload-box h4{
+
+    font-size:20px;
+
+  }
+
+  .preview-row{
+
+    justify-content:center;
+
+  }
+
+}
+
+@media (max-width:600px){
+
+  .upload-dialog{
+
+    padding:18px;
+
+  }
+
+  .dialog-header{
+
+    margin-bottom:32px;
+
+  }
+
+  .dialog-header p{
+
+    font-size:14px;
+
+  }
+
+  .divider span{
+
+    width:55px;
+
+  }
+
+  .photo-card,
+  .photo-add{
+
+    width:95px;
+    height:95px;
+
+  }
+
+  .review-card{
+
+    padding:18px;
+
+  }
+
+  .button-row{
+
+    flex-direction:column;
+
+  }
+
+}
+
+/*==================================================
+  NICE SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+  width:10px;
+  height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+  background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#2c2c2c;
+
+  border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background:var(--gold);
+
+}
+
+/*==================================================
+  ANIMATIONS
+==================================================*/
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+@keyframes scaleIn{
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.94);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+  }
+
+}
+
+.upload-dialog{
+
+  animation:scaleIn .35s ease;
+
+}
+
+.left-column,
+.right-column{
+
+  animation:fadeUp .5s ease;
+
+}
+
+/*==================================================
+  HOVER EFFECTS
+==================================================*/
+
+.upload-box,
+.photo-card,
+.photo-add,
+.review-card,
+.confirmation{
+
+  transition:all .25s ease;
+
+}
+
+.review-card:hover{
+
+  border-color:rgba(200,155,60,.45);
+
+  transform:translateY(-3px);
+
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.confirmation:hover{
+
+  border-color:rgba(200,155,60,.35);
+
+}
+
+.photo-card:hover img{
+
+  transform:scale(1.06);
+
+}
+
+.photo-card img{
+
+  transition:transform .35s ease;
+
+}
+
+/*==================================================
+  GOLD ACCENTS
+==================================================*/
+
+.left-column h3,
+.right-column h3{
+
+  position:relative;
+
+  padding-left:18px;
+
+}
+
+.left-column h3::before,
+.right-column h3::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:5px;
+
+  height:22px;
+
+  border-radius:8px;
+
+  background:var(--gold);
+
+}
+
+.review-left h4{
+
+  color:#f4f4f4;
+
+}
+
+.upload-box:hover .upload-icon{
+
+  transform:translateY(-4px);
+
+}
+
+.upload-icon{
+
+  transition:.3s;
+
+}
+
+/*==================================================
+  INPUT PLACEHOLDERS
+==================================================*/
+
+::placeholder{
+
+  color:#6d6d6d;
+
+  opacity:1;
+
+}
+
+/*==================================================
+  DIALOG SHADOW
+==================================================*/
+
+.upload-dialog::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:24px;
+
+  pointer-events:none;
+
+  border:1px solid rgba(255,255,255,.03);
+
+}
+
+.upload-dialog::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:1px;
+
+  border-radius:23px;
+
+  pointer-events:none;
+
+  box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.03);
+
+}
+
+/*==================================================
+  BUTTON ACTIVE STATES
+==================================================*/
+
+.submit-btn:active,
+.cancel-btn:active,
+.choose-btn:active{
+
+  transform:scale(.98);
+
+}
+
+/*==================================================
+  IMAGE GRID
+==================================================*/
+
+.preview-row{
+
+  align-items:center;
+
+}
+
+.photo-card,
+.photo-add{
+
+  flex-shrink:0;
+
+}
+
+/*==================================================
+  OPTIONAL BACKDROP
+==================================================*/
+
+.dialog-backdrop{
+
+  background:
+      radial-gradient(circle at top,
+      rgba(200,155,60,.08),
+      transparent 40%),
+      #050505;
+
+}
+
+/*==================================================
+  FINAL POLISH
+==================================================*/
+
+*{
+
+  box-sizing:border-box;
+
+}
+
+button{
+
+  transition:all .25s ease;
+
+}
+
+mat-icon{
+
+  user-select:none;
+
+}
+
+img{
+
+  user-select:none;
+
+  -webkit-user-drag:none;
+
+}
+
+body{
+
+  background:#050505;
+
+}
+
+.upload-dialog {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 90vh;
+
+    overflow: hidden;
+}
+
+.dialog-body {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding-right: 8px;
+}
+
+
+:root {
+  --bg: #050505;
+  --surface: #0f0f0f;
+  --surface-2: #171717;
+
+  --gold: #d4af37;
+
+  --text: #ffffff;      /* Main text */
+  --muted: #d1d5db;     /* Secondary text */
+
+  --border: #303030;
+}
+
+
+.dialog-header h1,
+.left-column h3,
+.right-column h3,
+.review-left h4 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.dialog-header p,
+.review-left p,
+.upload-box p,
+.upload-box small,
+.optional {
+    color: #d1d5db;
+}
+
+mat-label {
+    color: #f5f5f5 !important;
+    font-weight: 600;
+}
+
+::ng-deep .mat-mdc-input-element,
+::ng-deep textarea.mat-mdc-input-element,
+::ng-deep .mat-mdc-select-value-text {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+::ng-deep .mat-mdc-floating-label {
+    color: #e5e7eb !important;
+}
+
+.upload-box,
+.confirmation,
+.review-card,
+.mat-mdc-text-field-wrapper {
+    background: #141414 !important;
+}
+
+.upload-box,
+.review-card,
+.confirmation {
+    border: 1px solid #3a3a3a;
+}

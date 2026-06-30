@@ -1,0 +1,18 @@
+ 
+    <!-- Action Grid -->
+    <div class="action-grid">
+       <mat-card class="box" appearance="outlined">
+          <span class="card-label">Scan QR</span>
+          <button matButton id="camera-btn">Start Camera</button>
+       </mat-card>
+
+    <mat-card class="box" appearance="outlined">
+        <span class="card-label">Manual Token</span>
+        <mat-form-field class="token-input" appearance="outline">
+            <mat-label>Token</mat-label>
+            <input matInput formControlName="name" placeholder="Paste QR Token">
+            <mat-error>Token is required</mat-error>
+        </mat-form-field>
+        <button matButton id="look-up-button">LOOK UP</button>
+    </mat-card>
+    </div>

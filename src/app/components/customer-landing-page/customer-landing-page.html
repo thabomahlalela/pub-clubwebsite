@@ -1,0 +1,119 @@
+<div class="membership-page">
+
+  <!-- HEADER -->
+  <mat-toolbar class="top-nav">
+
+    <div class="logo">
+      <span class="gold">Swingles</span>
+      <span class="small">PUB & CHISANYAMA</span>
+    </div>
+
+
+
+    <div class="nav-links">
+  <a
+    mat-button
+    routerLink="/customer-landing-page/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">
+    HOME
+  </a>
+
+  <a
+    mat-button
+    routerLink="/customer-landing-page/menu"
+    routerLinkActive="active">
+    MENU
+  </a>
+
+  <a
+    mat-button
+    routerLink="/customer-landing-page/events"
+    routerLinkActive="active">
+    EVENTS
+  </a>
+
+  <a
+    mat-button
+    routerLink="/customer-landing-page/booking-table"
+    routerLinkActive="active">
+    BOOK A TABLE
+  </a>
+
+  <a
+    mat-button
+    routerLink="/customer-landing-page/membership"
+    routerLinkActive="active">
+    MEMBERSHIP
+  </a>
+</div>
+
+    <!-- <div class="nav-links">
+      <a mat-button  href="" class="active" >HOME</a>
+      <a mat-button href="/menu">MENU</a>
+      <a mat-button href="/events">EVENTS</a>
+      <a mat-button href="/booking-table">BOOK A TABLE</a>
+      <a mat-button href="/membership" >MEMBERSHIP</a>
+    </div> -->
+
+    <a mat-stroked-button  href="/customer-portal" class="account-btn">
+      ACCOUNT
+    </a>
+
+  </mat-toolbar>
+   <router-outlet/>
+ 
+
+
+   <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-logo">Swingles</div>
+        <div class="footer-small">
+          PUB & CHISANYAMA
+        </div>
+
+        <p>
+          Where the fire never sleeps and the gold never tarnishes.
+          Premium pours, slow-flame chisanyama, late nights.
+        </p>
+      </div>
+
+      <div>
+        <h4>VISIT</h4>
+
+        <p>
+          Open Wed – Sun<br>
+          16:00 – late<br>
+          Johannesburg, ZA
+        </p>
+      </div>
+
+      <div>
+        <h4>EXPLORE</h4>
+
+        <p>Menu</p>
+        <p>Events</p>
+        <p>Reserve a table</p>
+        <p>Membership</p>
+      </div>
+
+      <div>
+        <h4>CONTACT</h4>
+
+        <p>hello@swingles.co.za</p>
+        <p>+27 11 000 0000</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 SWINGLES PUB & CHISANYAMA • DRINK RESPONSIBLY • 18+
+    </div>
+
+  </footer>
+
+  </div>

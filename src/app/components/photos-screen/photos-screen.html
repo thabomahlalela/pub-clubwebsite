@@ -1,0 +1,158 @@
+<section class="gallery-section">
+
+  <!-- ========================= -->
+  <!-- SECTION HEADER -->
+  <!-- ========================= -->
+
+  <div class="section-title">
+
+    <div class="line"></div>
+
+    <div class="title-content">
+
+      <div class="heading">
+
+        <mat-icon>photo_camera</mat-icon>
+
+        <h2>CAPTURED AT SWINGLES</h2>
+
+      </div>
+
+      <p>
+        Real moments shared by our guests.
+      </p>
+
+    </div>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- FILTERS -->
+  <!-- ========================= -->
+
+  <div class="gallery-filters">
+
+    <button
+      mat-stroked-button
+      *ngFor="let category of categories"
+      class="filter-btn"
+      [class.active]="selectedCategory === category.name"
+      (click)="selectCategory(category)">
+
+      <mat-icon>{{category.icon}}</mat-icon>
+
+      {{category.name}}
+
+    </button>
+
+  </div>
+
+
+
+  <!-- ========================= -->
+  <!-- PHOTO GRID -->
+  <!-- ========================= -->
+
+  <div class="gallery-grid">
+
+    <mat-card
+      class="gallery-card"
+      *ngFor="let photo of filteredPhotos">
+
+      <div class="image-wrapper">
+
+        <img
+          [src]="photo.image"
+          [alt]="photo.caption">
+
+        <div class="image-overlay">
+
+          <button
+            mat-mini-fab
+            class="view-btn">
+
+            <mat-icon>fullscreen</mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CARD FOOTER -->
+
+      <div class="card-footer">
+
+        <div class="user">
+
+          <span class="username">
+
+            by {{photo.user}}
+
+          </span>
+
+        </div>
+
+        <div class="likes">
+
+          <mat-icon>favorite</mat-icon>
+
+          {{photo.likes}}
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+  </div>
+
+
+
+  <!-- ========================= -->
+  <!-- VIEW ALL -->
+  <!-- ========================= -->
+
+  <div class="view-all">
+
+    <button
+      mat-stroked-button
+      class="view-all-btn">
+
+      VIEW ALL PHOTOS
+
+    </button>
+
+  </div>
+
+
+
+  <!-- ========================= -->
+  <!-- FLOATING SHARE BUTTON -->
+  <!-- ========================= -->
+
+  <div class="share-floating">
+
+    <button
+      mat-fab
+      color="primary"
+      class="share-btn"
+      (click)="openShareDialog()">
+
+      <mat-icon>add</mat-icon>
+
+    </button>
+
+    <span>
+
+      SHARE YOUR NIGHT
+
+    </span>
+
+  </div>
+
+</section>

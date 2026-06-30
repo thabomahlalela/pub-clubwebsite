@@ -1,0 +1,486 @@
+<div class="orders-page">
+
+  <!-- HEADER -->
+
+  <div class="page-header">
+
+    <div class="title-area">
+
+      <span class="section-title">
+        VIEW ORDERS
+      </span>
+
+      <h1>
+        View orders
+      </h1>
+
+      <p>
+        Today's service floor
+      </p>
+
+    </div>
+
+    <div class="toolbar">
+
+      <!-- SEARCH -->
+
+      <mat-form-field
+        appearance="outline"
+        class="search-field">
+
+        <mat-icon matPrefix>
+          search
+        </mat-icon>
+
+        <input
+          matInput
+          placeholder="Search orders...">
+
+      </mat-form-field>
+
+      <!-- STATUS -->
+
+      <mat-form-field
+        appearance="outline"
+        class="status-field">
+
+        <mat-select value="all">
+
+          <mat-option value="all">
+            All Status
+          </mat-option>
+
+          <mat-option value="preparing">
+            Preparing
+          </mat-option>
+
+          <mat-option value="ready">
+            Ready
+          </mat-option>
+
+          <mat-option value="completed">
+            Completed
+          </mat-option>
+
+          <mat-option value="cancelled">
+            Cancelled
+          </mat-option>
+
+        </mat-select>
+
+      </mat-form-field>
+
+      <!-- REFRESH -->
+
+      <button
+        mat-stroked-button
+        class="refresh-btn">
+
+        <mat-icon>
+          refresh
+        </mat-icon>
+
+        Refresh
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- SUMMARY CARDS -->
+
+  <div class="summary-grid">
+
+    <!-- ACTIVE -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="summary-icon">
+
+          <mat-icon>
+            shopping_bag
+          </mat-icon>
+
+        </div>
+
+        <div class="summary-text">
+
+          <h2>24</h2>
+
+          <span>
+            ACTIVE ORDERS
+          </span>
+
+          <button
+            mat-button
+            class="link-btn">
+
+            View all
+
+            <mat-icon>
+              arrow_forward
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- PREPARING -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="summary-icon">
+
+          <mat-icon>
+            restaurant
+          </mat-icon>
+
+        </div>
+
+        <div class="summary-text">
+
+          <h2>13</h2>
+
+          <span>
+            PREPARING
+          </span>
+
+          <button
+            mat-button
+            class="link-btn">
+
+            View all
+
+            <mat-icon>
+              arrow_forward
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- READY -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="summary-icon">
+
+          <mat-icon>
+            room_service
+          </mat-icon>
+
+        </div>
+
+        <div class="summary-text">
+
+          <h2>5</h2>
+
+          <span>
+            READY
+          </span>
+
+          <button
+            mat-button
+            class="link-btn">
+
+            View all
+
+            <mat-icon>
+              arrow_forward
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- COMPLETED -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="summary-icon">
+
+          <mat-icon>
+            check_circle
+          </mat-icon>
+
+        </div>
+
+        <div class="summary-text">
+
+          <h2>120</h2>
+
+          <span>
+            COMPLETED
+          </span>
+
+          <button
+            mat-button
+            class="link-btn">
+
+            View all
+
+            <mat-icon>
+              arrow_forward
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+  </div>
+
+
+  <!-- =======================================================
+     FILTER BAR
+======================================================= -->
+
+<div class="orders-toolbar">
+
+  <div class="status-tabs">
+
+    <button
+      mat-button
+      class="tab active">
+
+      ALL ORDERS
+
+    </button>
+
+    <button
+      mat-button
+      class="tab">
+
+      ACTIVE
+
+    </button>
+
+    <button
+      mat-button
+      class="tab">
+
+      PREPARING
+
+    </button>
+
+    <button
+      mat-button
+      class="tab">
+
+      READY
+
+    </button>
+
+    <button
+      mat-button
+      class="tab">
+
+      COMPLETED
+
+    </button>
+
+    <button
+      mat-button
+      class="tab">
+
+      CANCELLED
+
+    </button>
+
+  </div>
+
+  <button
+    mat-stroked-button
+    class="sort-button">
+
+    <mat-icon>
+      sort
+    </mat-icon>
+
+    Newest First
+
+    <mat-icon>
+      keyboard_arrow_down
+    </mat-icon>
+
+  </button>
+
+</div>
+
+<div class="toolbar-divider"></div>
+<div class="orders-grid">
+
+  <mat-card
+    class="order-card"
+    *ngFor="let order of orders">
+
+    <!-- Header -->
+
+    <div class="order-header">
+
+      <div>
+
+        <div class="table-label">
+          {{order.table}}
+        </div>
+
+        <div class="customer-name">
+          {{order.customer}}
+        </div>
+
+      </div>
+
+      <div class="order-number">
+        #{{order.number}}
+      </div>
+
+    </div>
+
+    <!-- Status -->
+
+    <div class="status-row">
+
+      <span
+        class="status-chip"
+        [ngClass]="order.status.toLowerCase()">
+
+        {{order.status}}
+
+      </span>
+
+      <span class="time">
+
+        {{order.time}}
+
+      </span>
+
+    </div>
+
+    <!-- Divider -->
+
+    <div class="card-divider"></div>
+
+    <!-- Items -->
+
+    <div class="items">
+
+      <div
+        class="item"
+        *ngFor="let item of order.items">
+
+        <span>{{item.quantity}} ×</span>
+
+        <span>{{item.name}}</span>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div class="card-footer">
+
+      <div>
+
+        <div class="total-label">
+          Total
+        </div>
+
+        <div class="price">
+          {{order.total}}
+        </div>
+
+      </div>
+
+      <button
+        mat-flat-button
+        class="details-btn">
+
+        View Details
+
+      </button>
+
+    </div>
+
+  </mat-card>
+
+</div>
+
+
+<!-- PAGINATION -->
+
+<div class="pagination">
+
+    <button
+        mat-icon-button>
+
+        <mat-icon>
+
+            chevron_left
+
+        </mat-icon>
+
+    </button>
+
+    <button
+        mat-flat-button
+        class="page active">
+
+        1
+
+    </button>
+
+    <button
+        mat-button
+        class="page">
+
+        2
+
+    </button>
+
+    <button
+        mat-button
+        class="page">
+
+        3
+
+    </button>
+
+    <button
+        mat-icon-button>
+
+        <mat-icon>
+
+            chevron_right
+
+        </mat-icon>
+
+    </button>
+
+</div>
+
+</div>

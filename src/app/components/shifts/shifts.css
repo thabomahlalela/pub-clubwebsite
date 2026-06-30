@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+:host{
+
+display:block;
+
+}
+
+.shifts-page{
+
+background:#070709;
+
+min-height:100vh;
+
+padding:34px 38px;
+
+font-family:Inter,sans-serif;
+
+color:#f3eee7;
+
+}
+
+/* ========================= */
+
+.top-section{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+margin-bottom:42px;
+
+}
+
+/* ========================= */
+
+.label{
+
+color:#d5af56;
+
+letter-spacing:5px;
+
+font-size:12px;
+
+font-weight:600;
+
+margin-bottom:10px;
+
+}
+
+.page-title h1{
+
+margin:0;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:64px;
+
+font-weight:400;
+
+line-height:1;
+
+}
+
+.page-title p{
+
+margin-top:12px;
+
+font-size:18px;
+
+color:#b9b2a4;
+
+}
+
+/* ========================= */
+
+.toolbar{
+
+display:flex;
+
+gap:16px;
+
+align-items:flex-start;
+
+}
+
+/* ========================= */
+
+.search-field{
+
+width:320px;
+
+}
+
+.week-field{
+
+width:280px;
+
+}
+
+/* ========================= */
+
+::ng-deep .mat-mdc-text-field-wrapper{
+
+background:#0c0c0f !important;
+
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing{
+
+border-color:#29292d !important;
+
+}
+
+::ng-deep input{
+
+color:white !important;
+
+}
+
+::ng-deep .mat-mdc-select-value{
+
+color:white !important;
+
+}
+
+::ng-deep .mat-icon{
+
+color:#d5af56;
+
+}
+
+/* ========================= */
+
+.create-btn{
+
+height:56px;
+
+padding:0 28px;
+
+background:#d5af56 !important;
+
+color:#111 !important;
+
+font-weight:600;
+
+border-radius:2px !important;
+
+}
+
+/* ========================= */
+
+.summary-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+/* ========================= */
+
+.summary-card{
+
+background:#0c0c0f !important;
+
+border:1px solid #26262b;
+
+border-radius:2px !important;
+
+box-shadow:none !important;
+
+height:150px;
+
+transition:.25s;
+
+}
+
+.summary-card:hover{
+
+border-color:#d5af56;
+
+transform:translateY(-2px);
+
+}
+
+.summary-content{
+
+display:flex;
+
+align-items:center;
+
+gap:22px;
+
+height:100%;
+
+padding:24px;
+
+}
+
+.icon-circle{
+
+width:72px;
+
+height:72px;
+
+border-radius:50%;
+
+border:1px solid #6f5824;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.icon-circle mat-icon{
+
+font-size:34px;
+
+width:34px;
+
+height:34px;
+
+color:#d5af56;
+
+}
+
+.card-title{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:#c5baa4;
+
+margin-bottom:10px;
+
+}
+
+.card-value{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:56px;
+
+line-height:1;
+
+margin-bottom:12px;
+
+}
+
+.card-link{
+
+padding:0 !important;
+
+color:#d5af56 !important;
+
+justify-content:flex-start;
+
+}
+
+
+
+/* ============================================
+   VIEW TOOLBAR
+============================================ */
+
+.view-toolbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:34px;
+
+margin-bottom:18px;
+
+}
+
+.view-tabs{
+
+display:flex;
+
+gap:10px;
+
+align-items:center;
+
+}
+
+.view-tab{
+
+height:42px !important;
+
+border-radius:0 !important;
+
+letter-spacing:3px;
+
+font-size:12px;
+
+color:#c3b79d !important;
+
+padding:0 18px !important;
+
+transition:.25s;
+
+}
+
+.view-tab:hover{
+
+color:#d5af56 !important;
+
+}
+
+.view-tab.active{
+
+color:#d5af56 !important;
+
+position:relative;
+
+}
+
+.view-tab.active::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-2px;
+
+height:2px;
+
+background:#d5af56;
+
+}
+
+/* ============================================
+   RIGHT TOOLBAR
+============================================ */
+
+.toolbar-actions{
+
+display:flex;
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.department-field{
+
+width:210px;
+
+}
+
+.filter-btn{
+
+height:56px;
+
+padding:0 24px;
+
+border-radius:2px !important;
+
+border-color:#2d2d31 !important;
+
+color:#ece5d8 !important;
+
+}
+
+.filter-btn mat-icon{
+
+margin-right:8px;
+
+color:#d5af56;
+
+}
+
+/* ============================================
+   TABLE
+============================================ */
+
+.schedule-card{
+
+background:#0c0c0f;
+
+border:1px solid #25252a;
+
+margin-top:20px;
+
+overflow:hidden;
+
+}
+
+.schedule-header{
+
+display:grid;
+
+grid-template-columns:220px 1fr;
+
+border-bottom:1px solid #25252a;
+
+}
+
+.employee-column{
+
+padding:28px 20px;
+
+display:flex;
+
+align-items:center;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+color:#d7ccb5;
+
+border-right:1px solid #25252a;
+
+}
+
+.days-row{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+}
+
+.day-column{
+
+height:92px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+border-right:1px solid #25252a;
+
+position:relative;
+
+}
+
+.day-column:last-child{
+
+border-right:none;
+
+}
+
+.day-name{
+
+font-size:15px;
+
+color:#e9e3d8;
+
+margin-bottom:8px;
+
+letter-spacing:2px;
+
+}
+
+.day-date{
+
+font-size:13px;
+
+color:#9f9787;
+
+letter-spacing:1px;
+
+}
+
+.today-circle{
+
+width:36px;
+
+height:36px;
+
+border-radius:50%;
+
+background:#d5af56;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:14px;
+
+font-weight:700;
+
+color:#111;
+
+margin-bottom:8px;
+
+}
+
+
+/* ============================================
+   BODY
+============================================ */
+
+.schedule-body{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.schedule-row{
+
+display:grid;
+
+grid-template-columns:220px 1fr;
+
+border-bottom:1px solid #242428;
+
+min-height:95px;
+
+}
+
+.schedule-row:last-child{
+
+border-bottom:none;
+
+}
+
+/* ============================================
+   EMPLOYEE
+============================================ */
+
+.employee-info{
+
+display:flex;
+
+align-items:center;
+
+padding:18px;
+
+gap:16px;
+
+border-right:1px solid #242428;
+
+}
+
+.avatar{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:#d5af56;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:700;
+
+color:#111;
+
+font-size:16px;
+
+flex-shrink:0;
+
+}
+
+.employee-name{
+
+font-size:15px;
+
+font-weight:600;
+
+color:#f5f0e6;
+
+}
+
+.employee-role{
+
+margin-top:4px;
+
+font-size:13px;
+
+color:#a79f90;
+
+}
+
+/* ============================================
+   WEEK GRID
+============================================ */
+
+.week-grid{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+}
+
+.day-cell{
+
+border-right:1px solid #242428;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:10px;
+
+min-height:95px;
+
+}
+
+.day-cell:last-child{
+
+border-right:none;
+
+}
+
+/* ============================================
+   SHIFT CARD
+============================================ */
+
+.shift-card{
+
+width:100%;
+
+padding:10px;
+
+border-radius:6px;
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+.shift-card:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* Morning */
+
+.shift-card.morning{
+
+background:#4f3a15;
+
+border:1px solid #d5af56;
+
+}
+
+/* Evening */
+
+.shift-card.evening{
+
+background:#123341;
+
+border:1px solid #56c5e0;
+
+}
+
+/* Off */
+
+.shift-card.off{
+
+background:#241d1d;
+
+border:1px dashed #555;
+
+}
+
+.shift-time{
+
+font-size:13px;
+
+font-weight:600;
+
+color:#ffffff;
+
+}
+
+.shift-label{
+
+margin-top:6px;
+
+font-size:11px;
+
+letter-spacing:1px;
+
+color:#d6ccb8;
+
+}

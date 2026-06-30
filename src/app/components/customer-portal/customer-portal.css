@@ -436,14 +436,14 @@
 
 
 
-
+/* 
 .account-page {
   max-width: 1040px;
   margin: 0 auto;
   padding: 90px 24px;
   background: #020305;
   color: #f5f1e8;
-}
+} */
 
 /* HERO */
 
@@ -637,26 +637,25 @@
   }
 
   .account-page {
-    padding: 40px 16px;
+    /* padding: 40px 16px; */
   }
 }
 
-
+/* 
  .account-page {
   width: 100%;
   max-width: 2000px;
   margin: 0 auto;
   padding: 90px 60px;
   box-sizing: border-box;
-} 
+}  */
 
 
-
-/* .account-page {
+.account-page {
   width: 100%;
-  padding: 90px 8%;
+  /* padding: 90px 8%; */
   box-sizing: border-box;
-} */
+} 
 
 .footer-grid {
   width: 100%;

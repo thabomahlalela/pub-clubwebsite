@@ -1,0 +1,325 @@
+<div class="upload-dialog">
+
+  <!-- Close -->
+  <button mat-icon-button class="close-btn">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <!-- ================= HEADER ================= -->
+
+  <div class="dialog-header">
+
+    <div class="camera-circle">
+      <mat-icon>photo_camera</mat-icon>
+    </div>
+
+    <h1>Share Your Night</h1>
+
+    <div class="divider">
+      <span></span>
+      <mat-icon>star</mat-icon>
+      <span></span>
+    </div>
+
+    <p>
+      Share your best Swingles moments with us.<br>
+      Our team will review your photo before it's published.
+    </p>
+
+  </div>
+
+  <!-- ================= BODY ================= -->
+
+  <div class="dialog-body">
+
+    <!-- ========================================================= -->
+    <!-- LEFT SIDE -->
+    <!-- ========================================================= -->
+
+    <div class="left-column">
+
+      <h3>1. Upload Your Photo(s)</h3>
+
+      <div class="upload-box">
+
+        <mat-icon class="upload-icon">
+          cloud_upload
+        </mat-icon>
+
+        <h4>Drag & drop your photos here</h4>
+
+        <p>or</p>
+
+        <button
+          mat-stroked-button
+          color="primary"
+          class="choose-btn">
+
+          CHOOSE PHOTOS
+
+        </button>
+
+        <small>
+          Max 5 photos • JPG, PNG • Max 10MB each
+        </small>
+
+      </div>
+
+      <!-- ================= PREVIEW ================= -->
+
+      <div class="preview-row">
+
+        <div class="photo-card">
+
+          <button
+            mat-icon-button
+            class="remove-btn">
+
+            <mat-icon>close</mat-icon>
+
+          </button>
+
+          <img
+            src="assets/images/gallery1.jpg"
+            alt="">
+
+        </div>
+
+        <div class="photo-card">
+
+          <button
+            mat-icon-button
+            class="remove-btn">
+
+            <mat-icon>close</mat-icon>
+
+          </button>
+
+          <img
+            src="assets/images/gallery2.jpg"
+            alt="">
+
+        </div>
+
+        <div class="photo-card">
+
+          <button
+            mat-icon-button
+            class="remove-btn">
+
+            <mat-icon>close</mat-icon>
+
+          </button>
+
+          <img
+            src="assets/images/gallery3.jpg"
+            alt="">
+
+        </div>
+
+        <div class="photo-add">
+
+          <mat-icon>add</mat-icon>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- RIGHT SIDE -->
+    <!-- ========================================================= -->
+
+    <div class="right-column">
+
+      <!-- Part 2 goes here -->
+
+      <!-- ========================================= -->
+<!-- STEP 2 -->
+<!-- ========================================= -->
+
+<h3>2. Add Details</h3>
+
+<form [formGroup]="uploadForm" class="details-form">
+
+  <!-- Caption -->
+
+  <mat-label>Caption</mat-label>
+
+  <mat-form-field appearance="outline" class="full-width">
+
+    <textarea
+      matInput
+      rows="4"
+      maxlength="150"
+      placeholder="Tell us about your night..."
+      formControlName="caption">
+    </textarea>
+
+    <mat-hint align="end">
+      {{ uploadForm.get('caption')?.value?.length || 0 }}/150
+    </mat-hint>
+
+  </mat-form-field>
+
+  <!-- Event -->
+
+  <mat-label>
+    Event / Occasion
+    <span class="optional">(optional)</span>
+  </mat-label>
+
+  <mat-form-field appearance="outline" class="full-width">
+
+    <mat-select formControlName="event">
+
+      <mat-option value="">
+        Select an event
+      </mat-option>
+
+      <mat-option value="Friday Night">
+        Friday Night
+      </mat-option>
+
+      <mat-option value="Ladies Night">
+        Ladies Night
+      </mat-option>
+
+      <mat-option value="Live Music">
+        Live Music
+      </mat-option>
+
+      <mat-option value="Birthday">
+        Birthday Celebration
+      </mat-option>
+
+      <mat-option value="Other">
+        Other
+      </mat-option>
+
+    </mat-select>
+
+  </mat-form-field>
+
+  <!-- Date -->
+
+  <mat-label>Date Taken</mat-label>
+
+  <mat-form-field appearance="outline" class="full-width">
+
+    <input
+      matInput
+      [matDatepicker]="picker"
+      formControlName="dateTaken">
+
+    <mat-datepicker-toggle
+      matIconSuffix
+      [for]="picker">
+    </mat-datepicker-toggle>
+
+    <mat-datepicker #picker></mat-datepicker>
+
+  </mat-form-field>
+
+  <!-- Location -->
+
+  <mat-label>Location</mat-label>
+
+  <mat-form-field appearance="outline" class="full-width">
+
+    <mat-icon matPrefix>
+      location_on
+    </mat-icon>
+
+    <input
+      matInput
+      formControlName="location">
+
+  </mat-form-field>
+
+  <div class="confirmation">
+
+    <h3>3. Confirmation</h3>
+
+    <mat-checkbox color="primary" formControlName="accepted">
+
+      I confirm that I own these photos and give Swingles Pub &
+      Chisanyama permission to use them on our website and
+      social media.
+
+    </mat-checkbox>
+
+</div>
+
+</form>
+
+<!-- ========================================= -->
+<!-- STEP 3 -->
+<!-- ========================================= -->
+
+
+
+<!-- ========================================= -->
+<!-- REVIEW CARD -->
+<!-- ========================================= -->
+
+<div class="review-card">
+
+    <div class="review-left">
+
+        <div class="shield">
+
+            <mat-icon>verified_user</mat-icon>
+
+        </div>
+
+        <div>
+
+            <h4>Photos are reviewed</h4>
+
+            <p>
+                Our team reviews every submission to keep
+                the gallery authentic and safe.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="review-right">
+
+        <div class="button-row">
+
+            <button
+                mat-stroked-button
+                class="cancel-btn">
+
+                CANCEL
+
+            </button>
+
+            <button
+                mat-flat-button
+                color="primary"
+                class="submit-btn">
+
+                SUBMIT FOR REVIEW
+
+            </button>
+
+        </div>
+
+        <small>
+            You'll be notified once your photo is approved.
+        </small>
+
+    </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+</div>

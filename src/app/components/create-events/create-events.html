@@ -1,0 +1,97 @@
+<div class="event-page">
+
+  <div class="event-grid">
+
+    <!-- LEFT -->
+    <mat-card class="event-card">
+
+      <h3>CREATE EVENT</h3>
+
+      <label>TITLE</label>
+
+      <mat-form-field appearance="outline" class="full">
+        <input matInput>
+      </mat-form-field>
+
+      <label>DESCRIPTION</label>
+
+      <mat-form-field appearance="outline" class="full">
+        <textarea
+          matInput
+          rows="5">
+        </textarea>
+      </mat-form-field>
+
+      <label>STARTS AT</label>
+
+      <mat-form-field appearance="outline" class="full">
+        <input
+          matInput
+          type="datetime-local">
+      </mat-form-field>
+
+      <div class="two-cols">
+
+        <div>
+          <label>PRICE (R)</label>
+
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              value="150">
+          </mat-form-field>
+        </div>
+
+        <div>
+          <label>CAPACITY</label>
+
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              value="150">
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <label>POSTER (IMAGE)</label>
+
+      <div class="upload-row">
+
+        <button
+          mat-flat-button
+          class="upload-btn">
+
+          CHOOSE FILE
+
+        </button>
+
+        <span>No file chosen</span>
+
+      </div>
+
+      <button
+        mat-flat-button
+        class="publish-btn">
+
+        PUBLISH EVENT
+
+      </button>
+
+    </mat-card>
+
+    <!-- RIGHT -->
+
+    <div class="recent">
+
+      <h3>RECENT EVENTS</h3>
+
+      <div class="recent-box">
+        No events yet.
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

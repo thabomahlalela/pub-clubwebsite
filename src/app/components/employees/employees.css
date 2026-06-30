@@ -1,0 +1,327 @@
+:host {
+  display: block;
+}
+
+/* COLORS FROM SCREENSHOT */
+
+:root {
+  --bg: #040404;
+  --surface: #070707;
+  --border: #1b1b1b;
+  --gold: #d4ad52;
+  --gold-dark: #b8933f;
+  --text: #f5f0e7;
+  --muted: #9c9c9c;
+}
+
+.staff-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* TOPBAR */
+
+.topbar {
+  height: 84px;
+  border-bottom: 1px solid #141414;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 140px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 20px;
+  font-family: Georgia, serif;
+}
+
+.sub {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #9a9a9a;
+}
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  color: #b7b7b7 !important;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.signin-btn {
+  color: var(--gold) !important;
+  border: 1px solid #5f4a1b !important;
+  border-radius: 0 !important;
+  width: 110px;
+  height: 34px;
+  letter-spacing: 3px;
+}
+
+/* CONTENT */
+
+.content {
+  width: 980px;
+  margin: 60px auto;
+}
+
+.section-label {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-family: Georgia, serif;
+  font-size: 68px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.page-title span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* TABS */
+
+.staff-tabs {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.staff-tabs button {
+  color: #c4c4c4;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.active-tab {
+  background: var(--gold) !important;
+  color: #000 !important;
+  border-radius: 0 !important;
+  min-width: 128px;
+  height: 42px;
+}
+
+.divider {
+  margin-top: 12px;
+  border-bottom: 1px solid #1b1b1b;
+}
+
+/* GRID */
+
+.staff-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  gap: 40px;
+}
+
+/* CARD */
+
+.staff-card {
+  background: #070707 !important;
+  border: 1px solid #202020;
+  border-radius: 0 !important;
+  padding: 24px !important;
+  box-shadow: none !important;
+}
+
+.staff-card h3 {
+  margin: 0 0 20px;
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+
+.card-desc {
+  color: #b0b0b0;
+  margin-bottom: 22px;
+}
+
+.staff-card label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 22px;
+  color: #d3d3d3;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+/* MATERIAL FIELD */
+
+.full-width {
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background: #040404 !important;
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing {
+  border-color: #252525 !important;
+}
+
+::ng-deep .mat-mdc-input-element {
+  color: white !important;
+}
+
+/* ROLE BUTTONS */
+
+.role-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.role-btn {
+  flex: 1;
+  height: 42px;
+  border-radius: 0 !important;
+  border-color: #313131 !important;
+  color: white !important;
+}
+
+.active-role {
+  background: rgba(212, 173, 82, 0.12);
+  border-color: var(--gold) !important;
+}
+
+/* GRANT */
+
+.grant-btn {
+  margin-top: 24px;
+  width: 100%;
+  height: 46px;
+  border-radius: 0 !important;
+  background: var(--gold) !important;
+  color: #000 !important;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+/* RIGHT */
+
+.team-section h3 {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.team-box {
+  border: 1px solid #202020;
+  background: #070707;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  color: #c9c9c9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+
+  .content {
+    width: 90%;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0 30px;
+  }
+
+  .page-title {
+    font-size: 50px;
+  }
+}
+:root{
+  --bg: #020202;
+  --surface: #070707;
+  --border: #171717;
+
+  /* EXACT LUXURY GOLD LOOK */
+  --gold: #d7b04d;
+  --gold-hover: #e1bb5b;
+  --gold-dark: #a9832c;
+
+  --text: #f4f0e8;
+  --muted: #8e8e8e;
+}
+
+.page-title{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.page-title span{
+  color: #d7b04d;
+  font-style: italic;
+}
+
+.active-tab{
+  background: #d7b04d !important;
+  color: #000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.grant-btn{
+  background: #d7b04d !important;
+  color: #000 !important;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.section-label,
+.staff-card h3,
+.team-section h3{
+  color: #d7b04d;
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+
+.active-role{
+  background: rgba(215,176,77,.12);
+  border: 1px solid #d7b04d !important;
+  color: #d7b04d !important;
+}
+
+.logo{
+  color: #d7b04d;
+  font-size: 40px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.staff-page{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top center,
+      #070707 0%,
+      #030303 40%,
+      #000000 100%);
+}

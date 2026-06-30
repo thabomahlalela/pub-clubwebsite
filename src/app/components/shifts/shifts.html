@@ -1,0 +1,595 @@
+<div class="shifts-page">
+
+  <!-- ===========================
+       TOP HEADER
+  ============================ -->
+
+  <div class="top-section">
+
+    <div class="page-title">
+
+      <div class="label">
+        STAFF MANAGEMENT
+      </div>
+
+      <h1>
+        Shifts
+      </h1>
+
+      <p>
+        Manage staff schedules and shift assignments
+      </p>
+
+    </div>
+
+    <div class="toolbar">
+
+      <!-- Search -->
+
+      <mat-form-field
+        appearance="outline"
+        class="search-field">
+
+        <mat-icon matPrefix>
+          search
+        </mat-icon>
+
+        <input
+          matInput
+          placeholder="Search staff...">
+
+      </mat-form-field>
+
+      <!-- Week -->
+
+      <mat-form-field
+        appearance="outline"
+        class="week-field">
+
+        <mat-icon matPrefix>
+          calendar_today
+        </mat-icon>
+
+        <mat-select value="week">
+
+          <mat-option value="week">
+            May 20 – May 26, 2024
+          </mat-option>
+
+        </mat-select>
+
+      </mat-form-field>
+
+      <!-- Button -->
+
+      <button
+        mat-flat-button
+        class="create-btn">
+
+        <mat-icon>
+          add
+        </mat-icon>
+
+        Create Shift
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- ===========================
+       SUMMARY
+  ============================ -->
+
+  <div class="summary-grid">
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="icon-circle">
+
+          <mat-icon>
+
+            person_outline
+
+          </mat-icon>
+
+        </div>
+
+        <div>
+
+          <div class="card-title">
+            ON DUTY NOW
+          </div>
+
+          <div class="card-value">
+
+            12
+
+          </div>
+
+          <button
+            mat-button
+            class="card-link">
+
+            View staff
+
+            <mat-icon>
+
+              arrow_forward
+
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- ================= -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="icon-circle">
+
+          <mat-icon>
+
+            event
+
+          </mat-icon>
+
+        </div>
+
+        <div>
+
+          <div class="card-title">
+
+            UPCOMING SHIFTS
+
+          </div>
+
+          <div class="card-value">
+
+            18
+
+          </div>
+
+          <button
+            mat-button
+            class="card-link">
+
+            View all
+
+            <mat-icon>
+
+              arrow_forward
+
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- ================= -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="icon-circle">
+
+          <mat-icon>
+
+            check_circle_outline
+
+          </mat-icon>
+
+        </div>
+
+        <div>
+
+          <div class="card-title">
+
+            COMPLETED TODAY
+
+          </div>
+
+          <div class="card-value">
+
+            8
+
+          </div>
+
+          <button
+            mat-button
+            class="card-link">
+
+            View summary
+
+            <mat-icon>
+
+              arrow_forward
+
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    <!-- ================= -->
+
+    <mat-card class="summary-card">
+
+      <div class="summary-content">
+
+        <div class="icon-circle">
+
+          <mat-icon>
+
+            schedule
+
+          </mat-icon>
+
+        </div>
+
+        <div>
+
+          <div class="card-title">
+
+            HOURS WORKED
+
+          </div>
+
+          <div class="card-value">
+
+            96h 30m
+
+          </div>
+
+          <button
+            mat-button
+            class="card-link">
+
+            This week
+
+            <mat-icon>
+
+              arrow_forward
+
+            </mat-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </mat-card>
+
+    
+
+  </div>
+
+  <!-- =====================================================
+     VIEW OPTIONS
+====================================================== -->
+
+<div class="view-toolbar">
+
+  <div class="view-tabs">
+
+    <button
+      mat-button
+      class="view-tab active">
+
+      WEEK VIEW
+
+    </button>
+
+    <button
+      mat-button
+      class="view-tab">
+
+      DAY VIEW
+
+    </button>
+
+    <button
+      mat-button
+      class="view-tab">
+
+      STAFF VIEW
+
+    </button>
+
+  </div>
+
+  <div class="toolbar-actions">
+
+    <!-- Department -->
+
+    <mat-form-field
+      appearance="outline"
+      class="department-field">
+
+      <mat-select value="all">
+
+        <mat-option value="all">
+
+          All Departments
+
+        </mat-option>
+
+        <mat-option value="bar">
+
+          Bar
+
+        </mat-option>
+
+        <mat-option value="kitchen">
+
+          Kitchen
+
+        </mat-option>
+
+        <mat-option value="floor">
+
+          Floor
+
+        </mat-option>
+
+      </mat-select>
+
+    </mat-form-field>
+
+    <!-- Filter -->
+
+    <button
+      mat-stroked-button
+      class="filter-btn">
+
+      <mat-icon>
+
+        tune
+
+      </mat-icon>
+
+      Filters
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =====================================================
+     SCHEDULE TABLE
+====================================================== -->
+
+<div class="schedule-card">
+
+  <!-- Header -->
+
+  <div class="schedule-header">
+
+    <div class="employee-column">
+
+      STAFF MEMBER
+
+    </div>
+
+    <div class="days-row">
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          MON
+
+        </span>
+
+        <span class="day-date">
+
+          20 MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column active">
+
+        <div class="today-circle">
+
+          21
+
+        </div>
+
+        <span class="day-name">
+
+          TUE
+
+        </span>
+
+        <span class="day-date">
+
+          MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          WED
+
+        </span>
+
+        <span class="day-date">
+
+          22 MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          THU
+
+        </span>
+
+        <span class="day-date">
+
+          23 MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          FRI
+
+        </span>
+
+        <span class="day-date">
+
+          24 MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          SAT
+
+        </span>
+
+        <span class="day-date">
+
+          25 MAY
+
+        </span>
+
+      </div>
+
+      <div class="day-column">
+
+        <span class="day-name">
+
+          SUN
+
+        </span>
+
+        <span class="day-date">
+
+          26 MAY
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+    <div class="schedule-body">
+
+  <div
+    class="schedule-row"
+    *ngFor="let employee of employees">
+
+    <!-- Employee Info -->
+    <div class="employee-info">
+
+      <div class="avatar">
+
+        {{employee.initials}}
+
+      </div>
+
+      <div class="employee-details">
+
+        <div class="employee-name">
+
+          {{employee.name}}
+
+        </div>
+
+        <div class="employee-role">
+
+          {{employee.role}}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Week -->
+
+    <div class="week-grid">
+
+      <div
+        class="day-cell"
+        *ngFor="let shift of employee.shifts">
+
+        <ng-container *ngIf="shift">
+
+          <div
+            class="shift-card"
+            [ngClass]="shift.type">
+
+            <div class="shift-time">
+
+              {{shift.start}} - {{shift.end}}
+
+            </div>
+
+            <div class="shift-label">
+
+              {{shift.label}}
+
+            </div>
+
+          </div>
+
+        </ng-container>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- Shift rows added in Part 3 -->
+
+</div>
+
+
+
+</div>

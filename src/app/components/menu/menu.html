@@ -1,0 +1,355 @@
+<div class="menu-page">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <span class="section-title">
+                THE LIST
+            </span>
+
+            <h1>
+                The <span>menu.</span>
+            </h1>
+
+            <p>
+
+                Locally rooted, top-shelf, slow-cooked.
+
+                Prices in ZAR.
+
+                Tap items to order straight to your table.
+
+            </p>
+
+            <button mat-stroked-button class="table-btn">
+
+                ORDERING TO TABLE 3 · 2026-06-17 21:00
+
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="Screenshot 2026-06-28 104730.png"
+                alt="Steak">
+
+        </div>
+
+        <div class="featured-card">
+
+            <div class="featured-label">
+
+                ★ CHEF'S PICK
+
+            </div>
+
+            <h2>
+
+                Ribeye Steak
+
+            </h2>
+
+            <p>
+
+                Served with chips and pepper sauce
+
+            </p>
+
+            <h3>
+
+                R245
+
+            </h3>
+
+            <button
+                mat-raised-button
+                color="primary"
+                class="order-btn">
+
+                ORDER NOW
+
+            </button>
+
+        </div>
+
+    </section>
+      <!-- TODAY'S SPECIALS -->
+    <section class="specials-strip">
+     <div class="special-card">
+      <span class="special-tag">🔥 TODAY'S SPECIAL</span>
+      <h3>Steak Night</h3>
+      <span class="special-price">R199</span>
+    </div>
+
+    <div class="special-card">
+      <span class="special-tag">🍺 COMBO</span>
+      <h3>2 Castle Lager</h3>
+      <span class="special-price">R60</span>
+    </div>
+
+    <div class="special-card">
+      <span class="special-tag">🍗 HOT DEAL</span>
+      <h3>Wings Basket</h3>
+      <span class="special-price">R110</span>
+    </div>
+
+       <div class="special-card">
+      <span class="special-tag">🍸 HAPPY HOUR</span>
+      <h3>Cocktail Special</h3>
+      <span class="special-price">R85</span>
+    </div>
+
+  </section>
+
+    <!-- MAIN CONTENT -->
+
+    <section class="menu-layout">
+
+        <!-- LEFT COLUMN -->
+
+          <aside class="left-column">
+
+    <mat-card
+        class="category-card"
+        *ngFor="let category of categories">
+
+        <img
+            [src]="category.image">
+
+        <div class="category-overlay">
+
+            <div class="category-top">
+
+                <mat-icon>
+
+                    {{category.icon}}
+
+                </mat-icon>
+
+                <span>
+
+                    {{category.label}}
+
+                </span>
+
+            </div>
+
+            <h2>
+
+                {{category.title}}
+
+            </h2>
+
+        </div>
+
+    </mat-card>
+
+</aside>
+
+        <!-- CENTER COLUMN -->
+                    <main class="center-column">
+
+
+                      <mat-form-field appearance="outline" class="menu-search">
+
+    <mat-label>
+
+        Search menu
+
+    </mat-label>
+
+    <input matInput>
+
+    <mat-icon matSuffix>
+
+        search
+
+    </mat-icon>
+
+</mat-form-field>
+
+    <mat-card
+        class="food-card"
+        *ngFor="let item of menuItems">
+
+        <div class="food-image">
+
+            <img
+                [src]="item.image">
+
+        </div>
+
+        <div class="food-info">
+
+            <div class="food-title">
+
+                <h3>
+
+                    {{item.name}}
+
+                </h3>
+
+                <span
+                    *ngIf="item.popular"
+                    class="popular">
+
+                    POPULAR
+
+                </span>
+
+            </div>
+
+            <p>
+
+                {{item.description}}
+
+            </p>
+
+        </div>
+
+        <div class="food-actions">
+
+            <div class="price">
+
+                R {{item.price}}
+
+            </div>
+
+            <button
+                mat-raised-button
+                class="add-button">
+
+                + ADD
+
+            </button>
+
+        </div>
+
+    </mat-card>
+
+</main>
+
+        <!-- RIGHT COLUMN -->
+
+              <aside class="right-column">
+
+    <mat-card class="cart-card">
+
+        <div class="cart-header">
+
+            <div class="cart-title">
+
+                <mat-icon>shopping_bag</mat-icon>
+
+                <span>Your Order</span>
+
+            </div>
+
+            <div class="cart-count">
+
+                {{cart.length}}
+
+            </div>
+
+        </div>
+
+        <div class="empty-cart" *ngIf="cart.length==0">
+
+<mat-icon>
+
+shopping_bag
+
+</mat-icon>
+
+<h3>Your order is empty</h3>
+
+<p>
+
+Start adding delicious meals.
+
+</p>
+
+</div>
+
+       <!-- Empty Cart -->
+<div class="empty-cart" *ngIf="cart.length === 0">
+
+  <mat-icon>shopping_bag</mat-icon>
+
+  <h3>Your order is empty</h3>
+
+  <p>Start adding delicious meals.</p>
+
+</div>
+
+<!-- Cart Items -->
+<div *ngIf="cart.length > 0">
+
+  <div
+    class="cart-item"
+    *ngFor="let item of cart">
+
+    <div class="cart-info">
+      <h4>{{ item.name }}</h4>
+      <p>R {{ item.price }}</p>
+    </div>
+
+    <div class="quantity">
+
+      <button mat-icon-button (click)="decrease(item)">
+        <mat-icon>remove</mat-icon>
+      </button>
+
+      <span>{{ item.qty }}</span>
+
+      <button mat-icon-button (click)="increase(item)">
+        <mat-icon>add</mat-icon>
+      </button>
+
+    </div>
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="summary">
+
+    <div>
+      <span>Subtotal</span>
+      <strong>R {{ subtotal }}</strong>
+    </div>
+
+    <div>
+      <span>Service Fee</span>
+      <strong>R {{ serviceFee }}</strong>
+    </div>
+
+    <div class="total">
+      <span>Total</span>
+      <strong>R {{ total }}</strong>
+    </div>
+
+  </div>
+
+  <button
+    mat-raised-button
+    class="checkout-btn">
+
+    VIEW ORDER
+
+    <mat-icon>east</mat-icon>
+
+  </button>
+
+</div>
+    </mat-card>
+
+</aside>
+    </section>
+
+</div>

@@ -1,0 +1,97 @@
+<div class="report-page">
+
+  <div class="header-row">
+
+    <div class="title-block">
+      <div class="section-tag">SHIFT REPORT</div>
+      <h1>Hours by employee</h1>
+    </div>
+
+    <div class="controls">
+
+      <div class="date-box">
+        <label>FROM</label>
+
+        <mat-form-field appearance="outline">
+          <input matInput type="date">
+        </mat-form-field>
+      </div>
+
+      <div class="date-box">
+        <label>TO</label>
+
+        <mat-form-field appearance="outline">
+          <input matInput type="date">
+        </mat-form-field>
+      </div>
+
+      <button
+        mat-stroked-button
+        class="run-btn">
+        RUN
+      </button>
+
+      <button
+        mat-flat-button
+        class="export-btn">
+        EXPORT CSV
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="table-wrap">
+
+    <div class="table-head">
+      <span>EMPLOYEE</span>
+
+      <div class="right">
+        <span>SHIFTS</span>
+        <span>HOURS</span>
+      </div>
+    </div>
+
+    <div class="table-body">
+      No shifts in this range.
+    </div>
+
+  </div>
+
+  <div class="section-tag mt">
+    INDIVIDUAL SHIFTS
+  </div>
+
+  <div class="table-wrap">
+    <div class="table-body">
+      No shifts.
+    </div>
+  </div>
+
+  <div class="qr-section">
+
+    <div>
+
+      <div class="section-tag">
+        TABLE QR CODES
+      </div>
+
+      <h2>
+        Print & place on tables
+      </h2>
+
+      <p>
+        Guests scan to open the table-side ordering page.
+      </p>
+
+    </div>
+
+    <button
+      mat-flat-button
+      class="print-btn">
+      PRINT ALL
+    </button>
+
+  </div>
+
+</div>

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+:host {
+  display: block;
+}
+
+/* EXACT SCREENSHOT THEME */
+
+.report-page {
+  background: #070709;
+  min-height: 100vh;
+
+  width: 980px;
+  margin: 0 auto;
+
+  padding-top: 70px;
+
+  color: #f3eee5;
+}
+
+/* HEADER */
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title-block {
+  width: 320px;
+}
+
+.section-tag {
+  color: #d2a848;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 10px;
+}
+
+.title-block h1 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+
+  font-size: 29px;
+  line-height: 1;
+
+  color: #f3eee5;
+}
+
+/* FILTERS */
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.date-box {
+  width: 160px;
+}
+
+.date-box label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f3eee5;
+
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+/* MATERIAL OVERRIDES */
+
+::ng-deep .mat-mdc-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  background: #0b0b0d !important;
+  border-radius: 0 !important;
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing {
+  border-color: #232327 !important;
+}
+
+::ng-deep input.mat-mdc-input-element {
+  color: #f3eee5 !important;
+}
+
+/* BUTTONS */
+
+.run-btn {
+  width: 74px;
+  height: 40px;
+   position: relative;
+  margin-bottom: 30px;
+  /* margin-top: 100px; */
+  margin-bottom: 20;
+
+  border-radius: 0 !important;
+  border-color: #8f7131 !important;
+
+  color: #d2a848 !important;
+
+  letter-spacing: 4px;
+}
+
+.export-btn {
+  width: 142px;
+  height: 40px;
+  position: relative;
+  margin-bottom: 30px;
+
+  border-radius: 0 !important;
+
+  background: #9b7d38 !important;
+  color: #0d0d0d !important;
+
+  letter-spacing: 4px;
+}
+
+/* TABLES */
+
+.table-wrap {
+  margin-top: 30px;
+
+  background: #0b0b0d;
+
+  border: 1px solid #232327;
+}
+
+.table-head {
+  height: 48px;
+
+  border-bottom: 1px solid #232327;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  color: #ddd2bd;
+
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+.right {
+  display: flex;
+  gap: 18px;
+}
+
+.table-body {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  color: #c4b8a2;
+}
+
+.mt {
+  margin-top: 26px;
+}
+
+/* QR SECTION */
+
+.qr-section {
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-section h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 31px;
+  font-weight: 400;
+
+  color: #f3eee5;
+}
+
+.qr-section p {
+  margin-top: 8px;
+
+  color: #c4b8a2;
+  font-size: 14px;
+}
+
+.print-btn {
+  width: 126px;
+  height: 41px;
+
+  border-radius: 0 !important;
+
+  background: #dab155 !important;
+  color: #111 !important;
+
+  letter-spacing: 4px;
+}

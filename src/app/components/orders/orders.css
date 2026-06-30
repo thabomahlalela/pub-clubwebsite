@@ -1,0 +1,586 @@
+/* ======================================================
+   FILTER BAR
+====================================================== */
+
+.orders-toolbar{
+
+  margin-top:28px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.status-tabs{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:4px;
+
+}
+
+.tab{
+
+  height:42px !important;
+
+  border-radius:0 !important;
+
+  color:#c9c1b3 !important;
+
+  letter-spacing:3px;
+
+  font-size:12px;
+
+  transition:.25s;
+
+}
+
+.tab:hover{
+
+  color:#dab155 !important;
+
+}
+
+.tab.active{
+
+  color:#dab155 !important;
+
+  position:relative;
+
+}
+
+.tab.active::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  right:0;
+
+  bottom:-2px;
+
+  height:2px;
+
+  background:#dab155;
+
+}
+
+.sort-button{
+
+  width:175px;
+
+  height:42px;
+
+  border-radius:0 !important;
+
+  border-color:#262629 !important;
+
+  color:#f2ede4 !important;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+}
+
+.sort-button mat-icon{
+
+  color:#bfb29b;
+
+  font-size:19px;
+
+}
+
+.toolbar-divider{
+
+  height:1px;
+
+  background:#202124;
+
+  margin-top:-1px;
+
+  margin-bottom:20px;
+
+}
+
+.summary-grid{
+
+    margin-top:32px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.summary-card{
+
+    background:#0b0b0d !important;
+
+    border:1px solid #202124;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+
+    height:130px;
+
+    transition:.25s;
+
+}
+
+.summary-card:hover{
+
+    border-color:#dab155;
+
+    transform:translateY(-3px);
+
+}
+
+.summary-content{
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:20px;
+
+    gap:18px;
+
+}
+
+
+.summary-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:rgba(218,177,85,.12);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.summary-icon mat-icon{
+
+    color:#dab155;
+
+    font-size:28px;
+
+    width:28px;
+
+    height:28px;
+
+}
+
+
+.summary-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.summary-text h2{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:600;
+
+}
+
+.summary-text span{
+
+    margin-top:4px;
+
+    color:#b8b8b8;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+}
+
+
+.link-btn{
+
+    margin-top:10px;
+
+    justify-content:flex-start !important;
+
+    padding:0 !important;
+
+    color:#dab155 !important;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.link-btn mat-icon{
+
+    margin-left:4px;
+
+    font-size:16px;
+
+    width:16px;
+
+    height:16px;
+
+}
+
+
+@media(max-width:1100px){
+
+.summary-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.summary-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================
+   ORDER GRID
+============================= */
+
+.orders-grid{
+
+    margin-top:28px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+/* ============================
+   CARD
+============================= */
+
+.order-card{
+
+    background:#0b0b0d !important;
+
+    border:1px solid #202124;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
+
+    padding:22px !important;
+
+    transition:.25s;
+
+}
+
+.order-card:hover{
+
+    border-color:#dab155;
+
+    transform:translateY(-4px);
+
+}
+
+/* ============================
+   HEADER
+============================= */
+
+.order-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.table-label{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+.customer-name{
+
+    margin-top:4px;
+
+    color:#b7b7b7;
+
+    font-size:13px;
+
+}
+
+.order-number{
+
+    color:#d5af56;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+/* ============================
+   STATUS
+============================= */
+
+.status-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:18px;
+
+}
+
+.status-chip{
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.preparing{
+
+    background:#3a2911;
+
+    color:#e5b64d;
+
+}
+
+.ready{
+
+    background:#153822;
+
+    color:#72d483;
+
+}
+
+.completed{
+
+    background:#123044;
+
+    color:#89d2ff;
+
+}
+
+.cancelled{
+
+    background:#431919;
+
+    color:#ff9f9f;
+
+}
+
+.time{
+
+    color:#9e9e9e;
+
+    font-size:12px;
+
+}
+
+/* ============================
+   DIVIDER
+============================= */
+
+.card-divider{
+
+    margin:20px 0;
+
+    height:1px;
+
+    background:#202124;
+
+}
+
+/* ============================
+   ITEMS
+============================= */
+
+.items{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.item{
+
+    display:flex;
+
+    gap:10px;
+
+    color:#ece7de;
+
+}
+
+.item span:first-child{
+
+    color:#dab155;
+
+    width:34px;
+
+}
+
+/* ============================
+   FOOTER
+============================= */
+
+.card-footer{
+
+    margin-top:24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.total-label{
+
+    color:#999;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+.price{
+
+    color:#ffffff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.details-btn{
+
+    background:#dab155 !important;
+
+    color:#111 !important;
+
+    border-radius:0 !important;
+
+    height:40px;
+
+    padding:0 18px;
+
+}
+
+
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:42px;
+
+}
+
+.page{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:0 !important;
+
+    color:#d5d5d5 !important;
+
+}
+
+.page.active{
+
+    background:#dab155 !important;
+
+    color:#111 !important;
+
+}

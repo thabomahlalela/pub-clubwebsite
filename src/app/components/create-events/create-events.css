@@ -1,0 +1,158 @@
+:host {
+  display: block;
+}
+
+/* EXACT COLORS */
+
+:root{
+  --bg:#020202;
+  --surface:#050505;
+  --border:#1a1a1a;
+
+  --gold:#d4af50;
+  --gold-dark:#b8933d;
+
+  --text:#f5f0e8;
+  --muted:#9f9f9f;
+}
+
+.event-page{
+  min-height:100vh;
+  background:#020202;
+  padding-top:70px;
+}
+
+.event-grid{
+  width:980px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:470px 1fr;
+  gap:40px;
+}
+
+.event-card{
+  background:#050505 !important;
+  border:1px solid #1a1a1a;
+  border-radius:0 !important;
+  box-shadow:none !important;
+
+  padding:24px !important;
+}
+
+.event-card h3,
+.recent h3{
+  color:#d4af50;
+  letter-spacing:6px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:28px;
+}
+
+label{
+  display:block;
+  color:#d5d5d5;
+
+  letter-spacing:6px;
+  font-size:12px;
+
+  margin-bottom:12px;
+  margin-top:22px;
+}
+
+.full{
+  width:100%;
+}
+
+/* MATERIAL OVERRIDES */
+
+::ng-deep .mat-mdc-form-field{
+  width:100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper{
+  background:#020202 !important;
+  border-radius:0 !important;
+}
+
+::ng-deep .mat-mdc-form-field-flex{
+  min-height:44px;
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing{
+  border-color:#222 !important;
+}
+
+::ng-deep .mat-mdc-input-element{
+  color:#ffffff !important;
+  caret-color:#d4af50;
+}
+
+textarea{
+  resize:vertical;
+}
+
+.two-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.upload-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:10px;
+}
+
+.upload-row span{
+  color:#bdbdbd;
+  font-size:14px;
+}
+
+.upload-btn{
+  background:#d4af50 !important;
+  color:#000 !important;
+
+  border-radius:0 !important;
+
+  height:32px;
+
+  letter-spacing:4px;
+  font-size:12px;
+}
+
+.publish-btn{
+  width:100%;
+  margin-top:28px;
+
+  height:42px;
+
+  background:#d4af50 !important;
+  color:#000 !important;
+
+  border-radius:0 !important;
+
+  letter-spacing:5px;
+  font-size:13px;
+}
+
+.recent-box{
+  border:1px solid #1a1a1a;
+  background:#050505;
+
+  height:54px;
+
+  display:flex;
+  align-items:center;
+
+  padding-left:18px;
+
+  color:#d2d2d2;
+}
+
+.recent{
+  padding-top:2px;
+}

@@ -1,0 +1,233 @@
+ <!-- staff-console.component.html -->
+<!-- <div class="staff-container"> -->
+  <!-- Navigation -->
+  <!-- <header class="navbar">
+    <div class="nav-brand">Swingles Connect</div>
+    <nav class="nav-links">
+      <a href="#">HOME</a>
+      <a href="#">MENU</a>
+      <a href="#">EVENTS</a>
+      <a href="#">BOOK A TABLE</a>
+      <a href="#">MEMBERSHIP</a>
+      <a href="#">ACCOUNT</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="weather">11°C Partly cloudy</span>
+      <span class="lang">ENG</span>
+    </div>
+  </header> -->
+
+  <!-- Staff Console Content -->
+  <!-- <section class="staff-content"> -->
+    <!-- <div class="staff-header">
+      <span class="section-label">STAFF CONSOLE</span>
+      <h1>The <span id="back-house">back of house.</span></h1>
+    </div> -->
+
+    <!-- Navigation Tabs -->
+    <!-- <div class="staff-tabs">
+      <a href="/staff-portal/verify" class="active">VERIFY</a>
+      <a href="/staff-portal/orders">ORDERS</a>
+      <a href="/staff-portal/shifts">SHIFTS</a>
+      <a href="/staff-portal/report">REPORTS</a>
+      <a href="/staff-portal/create-events">EVENTS</a>
+      <a href="/staff-portal/employees">EMPLOYEES</a>
+    </div>
+    <router-outlet/> -->
+    <!-- </section> -->
+
+  <!-- Footer -->
+  <!-- <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>Swingles</h2>
+        <span class="brand-sub">PUB & CHISANYAMA</span>
+        <p class="footer-tagline">
+          Where the fire never sleeps and the gold never tarnishes. Premium pours, slow-flame chisanyama, late nights.
+        </p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>VISIT</h4>
+          <ul>
+            <li>Open Wed – Sun</li>
+            <li>16:00 – late</li>
+            <li>Johannesburg, ZA</li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Reserve a table</a></li>
+            <li><a href="#">Membership</a></li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h4>CONTACT</h4>
+          <ul>
+            <li><a href="#">hello@swingles.co.za</a></li>
+            <li><a href="#">+27 11 000 0000</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal">
+        <span>2026 SWINGLES PUB & CHISANYAMA</span>
+      </div>
+      <div class="footer-meta">
+        <span>11°C Partly cloudy</span>
+        <span>ENG</span>
+        <span>05:48</span>
+        <span>2026/06/22</span>
+      </div>
+    </div>
+  </footer>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="staff-page">
+
+  <!-- TOP NAVBAR -->
+  <header class="topbar">
+
+    <div class="brand">
+      <span class="logo">Swingles</span>
+      <span class="sub">PUB & CHISANYAMA</span>
+    </div>
+
+    <nav class="main-nav">
+      <a mat-button>HOME</a>
+      <a mat-button>MENU</a>
+      <a mat-button>EVENTS</a>
+      <a mat-button>BOOK A TABLE</a>
+      <a mat-button>MEMBERSHIP</a>
+    </nav>
+
+    <button mat-stroked-button class="signin-btn">
+      SIGN IN
+    </button>
+
+  </header>
+
+  <!-- CONTENT -->
+  <section class="content">
+
+    <p class="section-label">STAFF CONSOLE</p>
+
+    <h1 class="page-title">
+      The <span>back of house.</span>
+    </h1>
+
+    <!-- TABS -->
+    <div class="staff-tabs">
+      <button 
+      mat-button
+    routerLink="/staff-portal/verify"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+      
+      >VERIFY</button>
+      <button 
+        mat-button
+        routerLink="/staff-portal/orders"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >ORDERS</button>
+      <button 
+        mat-button
+        routerLink="/staff-portal/shifts"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      
+      >SHIFTS</button>
+      <button 
+        mat-button
+        routerLink="/staff-portal/report"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >REPORTS</button>
+      <button 
+        mat-button
+        routerLink="/staff-portal/create-events"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      
+      >EVENTS</button>
+
+      <button
+         mat-button
+        routerLink="/staff-portal/employees"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >
+        EMPLOYEES
+      </button>
+    </div>
+
+       <router-outlet/> 
+
+  </section>
+
+</div>
